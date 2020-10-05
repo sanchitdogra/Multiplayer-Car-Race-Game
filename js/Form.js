@@ -30,11 +30,13 @@ class Form {
       player.index = playerCount;
       player.update();
       player.updateCount(playerCount);
+      //player.updatePlayerRank();
       this.greeting.html("Hello " + player.name)
       this.greeting.position(displayWidth/2 - 70, displayHeight/4);
     });
 
     this.reset.mousePressed(()=>{
+      Player.updateCarsAtEnd(0)
       player.updateCount(0);
       game.update(0);
     });

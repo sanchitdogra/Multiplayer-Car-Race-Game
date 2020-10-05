@@ -2,29 +2,36 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Multiplayer Game</title>
+    <title>Car Race</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Form.js"></script>
+    <script src="js/Player.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 
-    <script>
-      //Your web app's Firebase configuration
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBrWCYGIDA4-HfiO2OoF9J5cRxyyzaoD-g",
+    authDomain: "multiplayer-car-race-gam-d0269.firebaseapp.com",
+    databaseURL: "https://multiplayer-car-race-gam-d0269.firebaseio.com",
+    projectId: "multiplayer-car-race-gam-d0269",
+    storageBucket: "multiplayer-car-race-gam-d0269.appspot.com",
+    messagingSenderId: "950564345893",
+    appId: "1:950564345893:web:2c7ec052ab7864254a47cc"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 
-      // // Initialize Firebase
-      // firebase.initializeApp(firebaseConfig);
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    </script>
-
-    <script src="js/Player.js"></script>
-    <script src="js/Form.js"></script>
-    <script src="js/Game.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
